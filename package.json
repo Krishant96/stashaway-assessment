@@ -1,0 +1,19 @@
+{
+  "name": "stashaway-assessment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./tests/*"
+  },
+  "keywords": [],
+  "author": "Krishant",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "joi": "^17.7.0",
+    "save-dev": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}

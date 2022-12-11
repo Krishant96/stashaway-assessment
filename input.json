@@ -1,0 +1,44 @@
+{
+  "deposit_plans": [
+    {
+      "deposit_type": "one-time",
+      "portfolios": [
+        {
+          "portfolio_type": "high-risk",
+          "amount": 10000,
+          "amount_unit": "$"
+        },
+        {
+          "portfolio_type": "retirement",
+          "amount": 500,
+          "amount_unit": "$"
+        }
+      ]
+    },
+    {
+      "deposit_type": "monthly",
+      "portfolios": [
+        {
+          "portfolio_type": "high-risk",
+          "amount": 0,
+          "amount_unit": "$"
+        },
+        {
+          "portfolio_type": "retirement",
+          "amount": 100,
+          "amount_unit": "$"
+        }
+      ]
+    }
+  ],
+  "deposit_funds": [
+    {
+      "amount": 200,
+      "amount_unit": "$"
+    },
+    {
+      "amount": 10500,
+      "amount_unit": "$"
+    }
+  ]
+}
