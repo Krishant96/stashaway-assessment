@@ -82,3 +82,8 @@ node index.js
 }
 
 ```
+
+- Running tests
+``` bash
+npm run test
+```

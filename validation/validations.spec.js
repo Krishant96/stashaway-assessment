@@ -1,4 +1,4 @@
-const { portfolioValidation, amountAllocationValidation } = require('../validation/validations.js');
+const { portfolioValidation, amountAllocationValidation } = require('./validations.js');
 
 describe("Portfolio Validation tests", () => {
   test("Successful portfolio validation", () => {

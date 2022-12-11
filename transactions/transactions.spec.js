@@ -1,4 +1,4 @@
-const { deposit } = require('../transactions/transactions.js');
+const { deposit } = require('./transactions.js');
 const { isValidJson } = require('../validation/validations.js');
 
 describe("Deposit test", () => {
@@ -118,7 +118,7 @@ describe("Deposit test", () => {
           "deposit_type": "oneTime",
           "portfolios": [
             {
-              "portfolio_type": "highrisk",
+              "portfolio_type": "high-risk",
               "amount": 10000,
               "amount_unit": "$"
             },

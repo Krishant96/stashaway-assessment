@@ -1,1 +1,6 @@
-{"portfolios":[{"portfolio_type":"high-risk","amount":90000,"amount_unit":"$"},{"portfolio_type":"retirement","amount":7000,"amount_unit":"$"}]}
+{
+  "portfolios": [
+    { "portfolio_type": "high-risk", "amount": 0, "amount_unit": "$" },
+    { "portfolio_type": "retirement", "amount": 0, "amount_unit": "$" }
+  ]
+}
