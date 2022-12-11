@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest ./*/*.spec.js"
+    "test": "jest --detectOpenHandles ./*/*.spec.js"
   },
   "keywords": [],
   "author": "Krishant",

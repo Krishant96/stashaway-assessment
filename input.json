@@ -33,7 +33,7 @@
   ],
   "deposit_funds": [
     {
-      "amount": 200,
+      "amount": 100,
       "amount_unit": "$"
     },
     {

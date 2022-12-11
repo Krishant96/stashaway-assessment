@@ -1,6 +1,6 @@
 const { schemas } = require('../validation/schemas/schemas.js');
 const { getPortfolios, updatePortfolio } = require('../portfolios/portfolios.js');
-const { portfolioValidation, amountAllocationValidation, inputValidation } = require('../validation/validations.js');
+const { portfolioValidation, inputValidation } = require('../validation/validations.js');
 
 exports.deposit = (inputData) => {
   try {
@@ -17,7 +17,7 @@ exports.deposit = (inputData) => {
 
     deposit_funds.forEach(deposit_fund => {
       deposit_plans.forEach(deposit_plan => {
-        let total_plan_amount = 0;
+        let total_deposit_plan_amount = 0;
 
         deposit_plan.portfolios.forEach(deposit_plan_portfolio => {
           // Check if portfolios exists
@@ -26,11 +26,11 @@ exports.deposit = (inputData) => {
             process.exit(1);
           }
 
-          total_plan_amount += deposit_plan_portfolio.amount;
+          total_deposit_plan_amount += deposit_plan_portfolio.amount;
         });
 
         // If deposit fund amount is sufficient
-        if (deposit_fund.amount === total_plan_amount) {
+        if (deposit_fund.amount === total_deposit_plan_amount) {
           deposit_plan.portfolios.forEach(deposit_plan_portfolio => {
             portfolios.forEach(portfolio => {
               // Add deposit fund amount to existing portfolio amount

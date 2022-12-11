@@ -3,7 +3,6 @@ const { isValidJson } = require('../validation/validations.js');
 
 describe("Deposit test", () => {
   test("Successful deposit test", () => {
-
     const inputData = {
       "deposit_plans": [
         {
@@ -49,7 +48,7 @@ describe("Deposit test", () => {
       ]
     };
 
-    // arrange and act
+    // Pass input into deposit function
     let result = deposit(inputData);
 
     // assert
@@ -104,11 +103,13 @@ describe("Deposit test", () => {
 
     const mockExit = jest.spyOn(process, 'exit').mockImplementation(() => { });
 
-    // arrange and act
+    // Pass input into deposit function
     deposit(inputData);
 
-    // assert    // expect(result).toBe(3);
+    // assert
     expect(mockExit).toHaveBeenCalledWith(1);
+
+    mockExit.mockRestore();
   });
 
   test("Failing deposit test due to incorrect deposit type", () => {
@@ -157,12 +158,14 @@ describe("Deposit test", () => {
       ]
     };
 
-    const mockExit = jest.spyOn(process, 'exit').mockImplementation(() => { });
+    let mockExit = jest.spyOn(process, 'exit').mockImplementation(() => { });
 
-    // arrange and act
+    // Pass input into deposit function
     deposit(inputData);
 
-    // assert    // expect(result).toBe(3);
+    // assert
     expect(mockExit).toHaveBeenCalledWith(1);
+
+    mockExit.mockRestore();
   });
 });

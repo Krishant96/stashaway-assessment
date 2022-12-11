@@ -1,3 +1,4 @@
+// Validate if portfolios in deposit_plan exists in customers portfolios
 exports.portfolioValidation = (input_portfolios, existing_portfolios) => {
   let portfolio_validation = existing_portfolios.find(portfolio => {
     return portfolio.portfolio_type === input_portfolios.portfolio_type;
@@ -11,6 +12,7 @@ exports.portfolioValidation = (input_portfolios, existing_portfolios) => {
   return true;
 };
 
+// Validate if deposit_funds is enough to be allocated according to the deposit plans
 exports.amountAllocationValidation = (deposit_funds, allocation) => {
   let total_amount_validation = deposit_funds.find(deposit_fund => {
     return deposit_fund.amount === allocation;
@@ -24,6 +26,7 @@ exports.amountAllocationValidation = (deposit_funds, allocation) => {
   return true;
 };
 
+// Check if result is a valid json
 exports.isValidJson = (text) => {
   if (typeof JSON.parse(text) === 'object') {
     return true;
@@ -32,6 +35,7 @@ exports.isValidJson = (text) => {
   return false;
 };
 
+// Check if input object is valid
 exports.inputValidation = (schemas, input) => {
   const { error } = schemas.validate(input);
   if (error != null) {

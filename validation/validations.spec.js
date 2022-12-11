@@ -21,7 +21,7 @@ describe("Portfolio Validation tests", () => {
       }
     ];
 
-    // arrange and act
+    // Calling portfolioValidation function with input_portfolios and existing_portfolios
     const result = portfolioValidation(input_portfolios, existing_portfolios);
 
     // assert
@@ -48,7 +48,7 @@ describe("Portfolio Validation tests", () => {
       }
     ];
 
-    // arrange and act
+    // Calling portfolioValidation function with input_portfolios and existing_portfolios
     const result = portfolioValidation(input_portfolios, existing_portfolios);
 
     // assert
@@ -71,7 +71,7 @@ describe("Amount allocation validation", () => {
 
     const total_one_time_allocation = 10500;
 
-    // arrange and act
+    // Calling amountAllocationValidation function with deposit_funds and total_one_time_allocation
     const result = amountAllocationValidation(deposit_funds, total_one_time_allocation);
 
     // assert
@@ -92,7 +92,7 @@ describe("Amount allocation validation", () => {
 
     const total_one_time_allocation = 10000;
 
-    // arrange and act
+    // Calling amountAllocationValidation function with deposit_funds and total_one_time_allocation
     const result = amountAllocationValidation(deposit_funds, total_one_time_allocation);
 
     // assert
@@ -113,7 +113,7 @@ describe("Amount allocation validation", () => {
 
     const total_one_time_allocation = 10700;
 
-    // arrange and act
+    // Calling amountAllocationValidation function with deposit_funds and total_one_time_allocation
     const result = amountAllocationValidation(deposit_funds, total_one_time_allocation);
 
     // assert

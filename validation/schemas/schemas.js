@@ -1,6 +1,7 @@
 const Joi = require('joi');
 
 exports.schemas = {
+  // Validation schema for input data
   input: Joi.object().keys({
     deposit_plans: Joi.array().items(
       {
@@ -21,4 +22,6 @@ exports.schemas = {
       }
     )
   })
+
+  // Define all other validation schemas below
 };
